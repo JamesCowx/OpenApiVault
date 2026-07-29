@@ -4,32 +4,28 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT">
 </p>
 
-<pre align="center">
- ██████╗ ██████╗ ███████╗███╗   ██╗ █████╗ ██████╗ ██╗
-██╔═══██╗██╔══██╗██╔════╝████╗  ██║██╔══██╗██╔══██╗██║
-██║   ██║██████╔╝█████╗  ██╔██╗ ██║███████║██████╔╝██║
-██║   ██║██╔═══╝ ██╔══╝  ██║╚██╗██║██╔══██║██╔═══╝ ██║
-╚██████╔╝██║     ███████╗██║ ╚████║██║  ██║██║     ███████╗
- ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝     ╚══════╝
-   ██╗   ██╗ █████╗ ██╗   ██╗██╗  ████████╗
-   ██║   ██║██╔══██╗██║   ██║██║  ╚══██╔══╝
-   ██║   ██║███████║██║   ██║██║     ██║
-   ╚██╗ ██╔╝██╔══██║██║   ██║██║     ██║
-    ╚████╔╝ ██║  ██║╚██████╔╝███████╗██║
-     ╚═══╝  ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝
-</pre>
+<h1 align="center">OpenApi<span style="font-weight:300;color:#8b5cf6">Vault</span></h1>
 
-<p align="center"><strong>A hand-curated vault of production-ready free public APIs.</strong></p>
+<p align="center"><em>A hand-curated collection of free public APIs. Every listing includes a real-world use case so you know exactly how to use it.</em></p>
 
 <p align="center">
   <a href="https://jamescowx.github.io/OpenApiVault"><strong>→ Live Demo</strong></a>
+  &nbsp;&middot;&nbsp;
+  <a href="#add-an-api"><strong>→ Add an API</strong></a>
 </p>
 
 ---
 
 ## What is this?
 
-OpenApiVault is a directory of free public APIs for developers. Every listing includes a **description** and a **real-world use case** so you know not just what the API does, but how you'd actually use it.
+OpenApiVault is a fast, searchable directory of free public APIs. Whether you're prototyping a side project or looking for data to power your next app, you'll find something useful here.
+
+Each listing includes:
+
+- A clear description of what the API provides
+- A practical use case — how you'd actually build with it
+- Auth requirements clearly labeled (none or API key)
+- Direct links to both the base URL and the official docs
 
 ---
 
@@ -37,15 +33,15 @@ OpenApiVault is a directory of free public APIs for developers. Every listing in
 
 | | |
 |---|---|
-| Search | Instant search by name, description, or use case |
-| Filter | One-click category pills |
-| Keyboard | `Ctrl+K` to focus search, `Esc` to clear |
-| Responsive | Works on every screen size |
-| Zero deps | Vanilla HTML, CSS & JS — no build step |
+| Instant search | Search by name, description, category, or use case |
+| Category filters | One-click pills to narrow results |
+| Keyboard shortcuts | `Ctrl+K` focuses search, `Esc` clears |
+| Responsive | Looks great on mobile and desktop |
+| Zero dependencies | Vanilla HTML, CSS, and JavaScript |
 
 ---
 
-## APIs by category
+## APIs (40 across 15 categories)
 
 | Category | Count | Highlights |
 |---|---|---|
@@ -54,7 +50,7 @@ OpenApiVault is a directory of free public APIs for developers. Every listing in
 | Fun | 7 | Chuck Norris, Bored API, Memegen.link, Kanye.rest |
 | Finance | 2 | CoinGecko, ExchangeRate API |
 | Animals | 3 | TheCatAPI, Dog API, Cataas |
-| Science | 2 | NASA APIs, SpaceX API |
+| Science | 2 | NASA, SpaceX |
 | Entertainment | 2 | TheMovieDB, Jikan (MyAnimeList) |
 | Weather | 1 | OpenWeatherMap |
 | Data | 3 | REST Countries, Genderize.io, Agify.io |
@@ -76,7 +72,7 @@ cd OpenApiVault
 open index.html
 ```
 
-No install, no bundler, no framework. Just open the file.
+No install, no build step. Just open the file.
 
 ---
 
@@ -100,7 +96,7 @@ No install, no bundler, no framework. Just open the file.
 
 4. Open a PR
 
-Only free APIs with a working free tier. Include the official docs link.
+**Guidelines:** free/public APIs only, include the official docs link, and write use cases that answer "what would I build with this?"
 
 ---
 
@@ -109,19 +105,25 @@ Only free APIs with a working free tier. Include the official docs link.
 | | |
 |---|---|
 | Markup | HTML5 |
-| Styling | CSS3 |
-| Logic | Vanilla JS |
-| Fonts | Inter + JetBrains Mono |
+| Styling | CSS3 (custom properties, grid) |
+| Logic | Vanilla JavaScript |
+| Fonts | Inter + JetBrains Mono (Google Fonts) |
 | Hosting | GitHub Pages |
 
-Three files. Zero dependencies.
+Three files. Zero dependencies. No frameworks.
 
 ---
 
 ## Why "OpenApiVault"?
 
-> A vault is where valuable things are curated and protected. Every API here has been hand-picked because it's genuinely useful, actively maintained, and free.
+> A vault is where valuable things are curated, not just stored. Every API here has been hand-picked because it's genuinely useful, actively maintained, and free for developers.
 
 ---
 
-<p align="center">Built by <a href="https://github.com/JamesCowx">JamesCowx</a> &middot; <a href="https://github.com/JamesCowx/OpenApiVault/pulls">Contribute</a></p>
+<p align="center">
+  <a href="https://github.com/JamesCowx/OpenApiVault">GitHub</a>
+  &nbsp;&middot;&nbsp;
+  <a href="https://github.com/JamesCowx/OpenApiVault/pulls">Contribute</a>
+  &nbsp;&middot;&nbsp;
+  <a href="https://jamescowx.github.io/OpenApiVault">Live site</a>
+</p>
