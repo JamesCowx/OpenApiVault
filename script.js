@@ -3,7 +3,7 @@ const apis = [
     name: "JSONPlaceholder",
     category: "Development",
     auth: "None",
-    icon: "&lt;/&gt;",
+    icon: "</>",
     description: "Free fake REST API for testing and prototyping. Provides posts, comments, users, todos, photos, and albums as predictable JSON endpoints.",
     useCase: "Mock a full backend in seconds. Ideal for frontend devs who need realistic data to test components or build quick prototypes.",
     url: "https://jsonplaceholder.typicode.com",
@@ -420,7 +420,7 @@ function getCategories() {
 function renderFilters() {
   const categories = getCategories();
   filterTags.innerHTML = categories.map(c =>
-    `<button class="pill${c === activeCategory ? ' active' : ''}" data-category="${c}">${c}</button>`
+    `<button class="pill${c === activeCategory ? ' active' : ''}" data-category="${esc(c)}">${esc(c)}</button>`
   ).join('');
 }
 
@@ -462,16 +462,12 @@ function render() {
   } else {
     emptyState.style.display = 'none';
     resultsText.textContent = `${filtered.length} of ${apis.length} APIs`;
-    if (filtered.length < apis.length) {
-      resultsHint.textContent = activeCategory !== 'All' || searchTerm ? '\u00B7 Filtered' : '';
-    } else {
-      resultsHint.textContent = '';
-    }
+    resultsHint.textContent = filtered.length < apis.length ? '\u00B7 Filtered' : '';
 
     grid.innerHTML = filtered.map(api => `
       <article class="card">
         <div class="card-head">
-          <h3><span class="cat-icon">${api.icon || ''}</span>${esc(api.name)}</h3>
+          <h3><span class="cat-icon">${esc(api.icon || '')}</span>${esc(api.name)}</h3>
           <div class="chips">
             <span class="chip ${api.auth === 'None' ? 'chip-auth-free' : 'chip-auth-key'}">${esc(api.auth)}</span>
           </div>
@@ -479,10 +475,10 @@ function render() {
         <p class="card-desc">${esc(api.description)}</p>
         <div class="card-usecase"><em>Use case</em> \u2014 ${esc(api.useCase)}</div>
         <div class="card-foot">
-          <a class="card-host" href="${esc(api.url)}" target="_blank" rel="noopener" title="${esc(api.url)}">${esc(displayHost(api.url))}</a>
-          <a class="btn-docs" href="${esc(api.docs)}" target="_blank" rel="noopener">
+          <a class="card-host" href="${api.url}" target="_blank" rel="noopener noreferrer">${esc(displayHost(api.url))}</a>
+          <a class="btn-docs" href="${api.docs}" target="_blank" rel="noopener noreferrer">
             Docs
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
           </a>
         </div>
       </article>

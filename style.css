@@ -362,6 +362,7 @@ body {
 }
 
 .card-host {
+  display: block;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.69rem;
   color: var(--text-dim);
@@ -475,4 +476,5 @@ body {
 }
 
 /* ── Selection ── */
+::-moz-selection { background: rgba(212,160,67,0.25); color: var(--text); }
 ::selection { background: rgba(212,160,67,0.25); color: var(--text); }
