@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenApiVault — Free Public APIs Directory</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg-glow bg-glow-1"></div>
+  <div class="bg-glow bg-glow-2"></div>
+  <div class="bg-grid"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 12l5 6L20 6"/>
+          </svg>
+        </div>
+        <span class="logo-text">OpenApi<span class="logo-highlight">Vault</span></span>
+      </a>
+      <a href="https://github.com" class="nav-gh" target="_blank" rel="noopener" title="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        <span class="api-count-num">40</span> Free APIs — Updated Weekly
+      </div>
+      <h1 class="hero-title">
+        Discover the best
+        <span class="gradient-text">free APIs</span>
+        for your next project
+      </h1>
+      <p class="hero-sub">
+        A hand-curated vault of production-ready public APIs. <br class="hero-br">
+        Every listing includes a real-world use case so you know exactly how to use it.
+      </p>
+      <div class="hero-stats">
+        <div class="hstat">
+          <span class="hstat-num counter" data-target="40">0</span>
+          <span class="hstat-label">Curated APIs</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <span class="hstat-num counter" data-target="15">0</span>
+          <span class="hstat-label">Categories</span>
+        </div>
+        <div class="hstat-divider"></div>
+        <div class="hstat">
+          <span class="hstat-num">100%</span>
+          <span class="hstat-label">Free Tier</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-orb"></div>
+  </header>
+
+  <main class="main">
+    <!-- Search & Filter Bar -->
+    <div class="toolbar" id="toolbar">
+      <div class="search-wrap">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <input
+          type="text"
+          id="searchInput"
+          class="search-input"
+          placeholder="Search by name, description, or use case..."
+          autocomplete="off"
+        >
+        <kbd class="search-kbd">⌘K</kbd>
+      </div>
+      <div class="filter-scroll" id="filterScroll">
+        <div class="filter-inner" id="filterTags"></div>
+      </div>
+    </div>
+
+    <!-- Results bar -->
+    <div class="results-bar" id="resultsBar">
+      <span id="resultsText"></span>
+    </div>
+
+    <!-- Cards grid -->
+    <div class="grid" id="apiGrid"></div>
+
+    <!-- Empty state -->
+    <div class="empty" id="emptyState" style="display:none;">
+      <div class="empty-icon">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity="0.5">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="M21 21l-4.35-4.35"/>
+          <path d="M8 11h6"/>
+        </svg>
+      </div>
+      <h3>Nothing matched your search</h3>
+      <p>Try a different term or clear the filters to see all <span class="api-count-num">40</span> APIs.</p>
+      <button class="btn-clear" id="btnClear">Clear all filters</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-text" style="font-size:1.1rem;">OpenApi<span class="logo-highlight">Vault</span></span>
+        <p>All APIs listed are free and publicly available. Always review a provider's terms of service before use in production.</p>
+      </div>
+      <div class="footer-links">
+        <span>Built with vanilla HTML, CSS & JS — no frameworks needed.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
